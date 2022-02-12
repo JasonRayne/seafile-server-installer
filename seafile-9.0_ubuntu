@@ -99,12 +99,12 @@ echo
 # -------------------------------------------
 # Vars
 # -------------------------------------------
-SEAFILE_ADMIN=admin@seafile.local
+SEAFILE_ADMIN=alayer710@pm.me
 SEAFILE_SERVER_USER=seafile
 SEAFILE_SERVER_HOME=/opt/seafile
 IP_OR_DOMAIN=127.0.0.1
 SEAFILE_VERSION=$1
-TIME_ZONE=Europe/Berlin
+TIME_ZONE=America/Los_Angeles
 
 if is_pro; then
     SEAFILE_SERVER_PACKAGE=seafile-pro-server_${SEAFILE_VERSION}_x86-64.tar.gz
@@ -151,8 +151,8 @@ fi
 # -------------------------------------------
 apt-get update
 
-apt-get install -y python3 python3-setuptools python3-pip python3-ldap memcached openjdk-8-jre \
-    libmemcached-dev libreoffice-script-provider-python libreoffice pwgen curl nginx libmysqlclient-dev
+apt-get install -y python3 python3-setuptools python3-pip python3-ldap memcached nvidia-openjdk-8-jre \
+    libmemcached-dev libreoffice-script-provider-python libreoffice pwgen curl nginx libmariadb-dev
 
 pip3 install --timeout=3600 django==3.2.* future mysqlclient pymysql Pillow pylibmc captcha jinja2 sqlalchemy==1.4.3 psd-tools django-pylibmc django-simple-captcha pycryptodome==3.12.0 cffi==1.14.0
 
